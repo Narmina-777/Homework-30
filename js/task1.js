@@ -41,7 +41,7 @@ console.log("Заказ с productId", targetProductId, ":", orderProductID);
 // TASK 3
 const orderTotals = orders.map((order) => ({
   orderId: order.orderId,
-  total: order.items.reduce((sum, item) => sum + item.quantity * item.price, 0),
+  total: order.items.reduce((acc, item) => acc + item.quantity * item.price, 0),
 }));
 console.log("Сумма заказов:", orderTotals);
 

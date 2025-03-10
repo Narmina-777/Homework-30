@@ -53,7 +53,7 @@ console.log("Заказ с productId", targetProductId, ":", orderWebcam);
 // TASK 3
 const ordersSum = orders.map((order) => ({
   orderId: order.orderId,
-  total: order.items.reduce((sum, item) => sum + item.price * item.quantity, 0),
+  total: order.items.reduce((acc, item) => acc + item.price * item.quantity, 0),
   status: order.status,
 }));
 console.log("Сумма заказов:", ordersSum);
